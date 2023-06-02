@@ -13,22 +13,29 @@ public class BJ1063 {
 		int n = Integer.parseInt(st.nextToken());
 		String[] columns = {"A", "B", "C", "D", "E", "F", "G", "H"};
 		String[] rows = {"1","2","3","4","5","6","7","8"};
-		String[][] chess = new String[rows.length][columns.length];
+		String[][] chess = new String[rows.length][columns.length];//원소의 개수
 	
 		long sx = 0;
 		long sy = 0;
 		long kx = 0;
 		long ky = 0;
+		
+
+//        for (int i = 0; i < chess.length; i++) {
+//            char c = 'A';
+//            for (int j = 0; j < chess.length; j++) {
+//                chess[i][j] = c + String.valueOf(i + 1);
+//                c++;
+//            }
+//        }
 	
 		//체스판
 		for(int i=0; i<rows.length; i++) {
 			for(int j=0; j<columns.length; j++) {
 				String square = columns[i].concat(rows[j]);
 				chess[i][j] = square;
-				
 			}
 		}
-	
 		
 		for(int j=0; j<columns.length; j++) {
 			if(columns[j].charAt(0) ==  k.charAt(0)) {
